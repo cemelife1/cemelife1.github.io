@@ -27,7 +27,7 @@
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
     }
     h2 {
@@ -35,16 +35,45 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
-    li {
-      margin-bottom: 1rem;
+    .card {
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .contact a {
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1rem;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .card-text {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .card-links a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      margin-right: 1rem;
       color: #1e90ff;
       text-decoration: none;
+      font-weight: bold;
     }
     footer {
       background-color: #1a1a1a;
@@ -63,68 +92,43 @@
   </header>
 
   <section>
-    <h2>About Me</h2>
-    <p>I'm a senior Computer Science major at New Mexico State University with a minor in Communication Studies. I enjoy bridging technology and communication to solve real-world problems. My interests include AI, data analysis, and cybersecurity. I’ve interned with the Department of Homeland Security and participated in impactful academic and volunteer experiences.</p>
-  </section>
+    <h2>Featured Projects</h2>
+    <div class="projects">
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Compiler Development</strong><br />
-        Built with C++ to translate source code into MIPS, used in symbol tables, with error prevention features. (Spring 2023)
-      </li>
-      <li>
-        <strong>Note-Taking Android App</strong><br />
-        Developed using Java for Android, complete with technical documentation and peer code review leadership. (Spring 2023)
-      </li>
-    </ul>
-  </section>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x160.png?text=Note-Taking+App" alt="Note-Taking App" />
+        <div class="card-body">
+          <div class="card-title">Note-Taking App for Android</div>
+          <div class="card-text">Developed using Java for Android, this app allows users to create and save notes. Led code reviews and assisted in creating technical documentation.</div>
+          <div class="card-links">
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+      </div>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>DHS Hs-Power Intern (Summer 2024)</strong><br />
-        - Developed dashboards and geodatabases using ESRI tools<br />
-        - Analyzed datasets for CBP decision-making<br />
-        - Gained skills in geospatial modeling and data visualization
-      </li>
-      <li>
-        <strong>Administrative Assistant, Elevated Energy – Nigeria</strong><br />
-        - Solved software issues and supported IT tickets<br />
-        - Collaborated with other departments for tech solutions
-      </li>
-      <li>
-        <strong>Program Specialist, Consecrated Consult – Nigeria</strong><br />
-        - Taught computer basics to children ages 5–7<br />
-        - Handled parent communications and admin tasks
-      </li>
-    </ul>
-  </section>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x160.png?text=Compiler+Project" alt="Compiler Project" />
+        <div class="card-body">
+          <div class="card-title">C++ Compiler to MIPS</div>
+          <div class="card-text">Built a compiler using C++ to translate source code into MIPS assembly. Included error handling for syntax and semantic issues.</div>
+          <div class="card-links">
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+      </div>
 
-  <section>
-    <h2>Certifications & Involvement</h2>
-    <ul>
-      <li>TRIO STEM-H (Mentoring & tutoring program)</li>
-      <li>Communication Club – Vice President</li>
-      <li>Redeem Church Media Team – Sound/Media Tech</li>
-    </ul>
-  </section>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x160.png?text=Case+Type+Categorizer" alt="DHS Categorizer" />
+        <div class="card-body">
+          <div class="card-title">DHS Case Type Categorizer</div>
+          <div class="card-text">Created during my DHS internship, this project classifies Homeland Security case data into categories using keyword scoring and MATLAB. Supported decision-making with visual dashboards.</div>
+          <div class="card-links">
+            <a href="#">More Info</a>
+          </div>
+        </div>
+      </div>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> C++, Java, Python, Fortran, LISP</li>
-      <li><strong>Tools:</strong> MATLAB, ArcGIS, ESRI, Microsoft Suite, Google Suite, Cloud Services</li>
-      <li><strong>Soft Skills:</strong> Leadership, Communication, Bilingual (English, Igbo)</li>
-    </ul>
-  </section>
-
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>GitHub: <a href="https://github.com/cemelife1" target="_blank">github.com/cemelife1</a></p>
-    <p>Email: <a href="mailto:cemelife@nmsu.edu">cemelife@nmsu.edu</a></p>
+    </div>
   </section>
 
   <footer>
